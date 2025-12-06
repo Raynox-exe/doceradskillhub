@@ -1,6 +1,6 @@
 // ================================
 // 📌 Docerad SkillHub - Server.js
-// Production Ready Express Server
+// Production + Vercel Ready Server
 // ================================
 
 // Core Modules
@@ -24,17 +24,17 @@ const PORT = process.env.PORT || 3000;
 // ================================
 // 📌 Security & Performance Middleware
 // ================================
-app.use(helmet()); // Secure HTTP headers
-app.use(cors()); // Allow APIs
-app.use(compression()); // Compress responses
-app.use(morgan("combined")); // Logging (production friendly)
+app.use(helmet());
+app.use(cors());
+app.use(compression());
+app.use(morgan("combined"));
 
-// Rate Limiting - Prevent Abuse
+// Rate Limiting
 app.use(
   rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 200, // Max 200 requests
-    message: "Too many requests, please try again later.",
+    windowMs: 15 * 60 * 1000,
+    max: 200,
+    message: "Too many requests, try again later.",
   })
 );
 
@@ -45,57 +45,53 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ================================
-// 📌 View Engine (EJS)
+// 📌 View Engine (EJS + ejs-mate)
 // ================================
-app.engine("ejs", ejsMate); // use ejs-mate
+app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // ================================
-// 📌 Static Files
+// 📌 Static Files (Vercel Compatible)
 // ================================
 app.use("/public", express.static(path.join(__dirname, "public")));
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // ================================
-// 📌 MongoDB Connection
+// 📌 Database Connection (Fix for Vercel)
 // ================================
-mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/docerad", {
-    autoIndex: false,
-  })
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => {
-    console.error("❌ MongoDB Error:", err);
-    process.exit(1);
-  });
+if (!global._mongooseConnected) {
+  mongoose
+    .connect(process.env.MONGODB_URI, { autoIndex: false })
+    .then(() => {
+      console.log("✅ MongoDB Connected");
+      global._mongooseConnected = true;
+    })
+    .catch((err) => console.error("❌ MongoDB Error:", err));
+}
 
 // ================================
-// 📌 Basic Test Route
+// 📌 Basic Route
 // ================================
 app.get("/", (req, res) => {
   res.render("pages/index", {
-    message: "Docerad SkillHub API is running...",
     title: "Docerad SkillHub",
+    message: "Docerad SkillHub API running...",
   });
 });
 
 // ================================
 // 📌 Routes Import
 // ================================
-const authRoutes = require("./routes/auth");
-const profileRoutes = require("./routes/profile");
-const adminRoutes = require("./routes/admin");
-
-app.use("/auth", authRoutes);
-app.use("/profile", profileRoutes);
-app.use("/admin", adminRoutes);
+app.use("/auth", require("./routes/auth"));
+app.use("/profile", require("./routes/profile"));
+app.use("/admin", require("./routes/admin"));
 
 // ================================
 // 📌 404 Handler
 // ================================
-app.use((req, res, next) => {
-  res.status(404).send("404", { title: "Page Not Found" });
+app.use((req, res) => {
+  res.status(404).render("pages/404", { title: "Page Not Found" });
 });
 
 // ================================
@@ -103,7 +99,6 @@ app.use((req, res, next) => {
 // ================================
 app.use((err, req, res, next) => {
   console.error("🔥 Server Error:", err.message);
-
   res.status(500).json({
     status: "error",
     message: "Internal Server Error",
@@ -111,8 +106,16 @@ app.use((err, req, res, next) => {
 });
 
 // ================================
-// 📌 Start Server
+// 📌 EXPORT FOR VERCEL
 // ================================
-app.listen(PORT, () => {
-  console.log(`🚀 Production Server Running → http://localhost:${PORT}`);
-});
+module.exports = app;
+
+// ================================
+// 📌 Local Development Server
+// (Vercel will NOT run this part)
+// ================================
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`🚀 Dev Server → http://localhost:${PORT}`);
+  });
+}
