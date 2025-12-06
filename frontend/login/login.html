@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome Back - Sign In</title>
+  <style>
+    :root{--accent:#5b5af8;--accent-2:#6b55f8;--card:#ffffff;--bg1:#eef6ff;--bg2:#f6f9ff}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));display:flex;align-items:flex-start;justify-content:center;padding-top:56px}
+    .container{width:420px;max-width:94%;padding:0 28px}
+    .card{background:var(--card);border-radius:14px;padding:44px 28px 22px;box-shadow:0 10px 30px rgba(38,57,95,0.06);border:1px solid rgba(91,90,248,0.06);position:relative}
+    .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(180deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;position:absolute;left:50%;top:0;transform:translate(-50%,-50%);color:#fff;font-size:26px;box-shadow:0 6px 18px rgba(38,57,95,0.12);border:4px solid rgba(255,255,255,0.85)}
+    .avatar svg{width:34px;height:34px;display:block}
+    h1{font-size:20px;margin:12px 0 4px;text-align:center;color:#13283b;font-weight:800}
+    p.lead{font-size:13px;margin:0 0 18px;text-align:center;color:#5e6f80}
+    form{display:block}
+    .field{display:flex;flex-direction:column;margin-bottom:12px}
+    label{font-size:12px;color:#5e6f80;margin-bottom:8px;font-weight:600}
+    input[type=text], input[type=email], input[type=tel], input[type=password]{height:44px;padding:10px 12px;border-radius:8px;border:1px solid #e6eef9;background:#fff;font-size:14px;color:#213142;box-sizing:border-box;width:100%;display:block}
+    .icon-input{position:relative}
+    .icon-input .left-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#9aa9b8;font-size:14px}
+    .icon-input input{padding-left:36px}
+    .row{display:flex;gap:12px}
+    .remember-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .remember-row .left{display:flex;align-items:center;gap:8px}
+    .submit{margin-top:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none;padding:12px 16px;border-radius:8px;width:100%;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(91,90,248,0.12)}
+    .divider-row{margin:16px 0;display:flex;align-items:center;gap:12px}
+    .divider-row hr{flex:1;border:none;height:1px;background:#e6eef9}
+    .divider-row .label{font-size:13px;color:#9aa9b8;white-space:nowrap}
+    .social-row{display:flex;gap:12px;margin-bottom:6px}
+  .social-row .social-btn{flex:1;min-width:0;border:1px solid #e6eef9;background:#fff;padding:10px 12px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600}
+  .social-row .social-btn.google{color:#222}
+  /* Google logo color */
+  .social-row .social-btn.google .logo{color:#DB4437;font-weight:800}
+    .social-row .social-btn.linkedin{color:#0a66c2}
+    .small-note{text-align:center;font-size:13px;color:#6f8092;margin-top:8px}
+    .legal{max-width:420px;margin:18px auto 0;text-align:center;font-size:12px;color:#6f8ca6;padding:6px 8px}
+    .legal a{color:var(--accent);text-decoration:none;font-weight:600}
+    .legal a:hover{text-decoration:underline}
+    @media (max-width:420px){.container{padding:0 16px}.card{padding-top:56px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="margin-bottom: 20px;">
+      <a href="../index (2).html" style="display: inline-flex; align-items: center; text-decoration: none; color: #5e6f80; font-weight: 600; font-size: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
+    </div>
+    <div class="card">
+      <div class="avatar" aria-hidden="true">
+        <!-- graduation cap style svg -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M12 2L2 7l10 5 10-5-10-5z" fill="rgba(255,255,255,0.95)"/>
+          <path d="M4 10v3c0 3.866 3.582 7 8 7s8-3.134 8-7v-3" stroke="rgba(255,255,255,0.95)" stroke-width="0.5"/>
+        </svg>
+      </div>
+
+      <h1>Welcome Back</h1>
+      <p class="lead">Sign in to your Entrepreneurship Training account</p>
+
+      <form action="#" method="post" onsubmit="return false;">
+        <div class="field">
+          <label for="email">Email Address</label>
+          <div class="icon-input">
+            <span class="left-icon">✉️</span>
+            <input id="email" name="email" type="email" placeholder="Enter your email" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Transaction ID</label>
+          <div class="icon-input">
+            <span class="left-icon">🔒</span>
+            <input id="password" name="password" type="password" placeholder="Enter ID" />
+          </div>
+        </div>
+
+        <div class="remember-row">
+          <div class="left"><input id="remember" type="checkbox" /> <label for="remember" style="font-size:13px;color:#6f8092">Remember me</label></div>
+          <div><a href="Forgotpass.html" style="color:var(--accent);text-decoration:none;font-weight:600">Forgot password?</a></div>
+        </div>
+
+        <button class="submit" type="submit">● Sign In</button>
+<!--
+        <div class="divider-row">
+          <hr />
+          <div class="label">Or continue with</div>
+          <hr />
+        </div>
+
+        <div class="social-row">
+          <button type="button" class="social-btn google" aria-label="Continue with Google"><span class="logo">G</span> <span>Google</span></button>
+          <button type="button" class="social-btn linkedin" aria-label="Continue with LinkedIn">in <span>LinkedIn</span></button>
+        </div>
+-->
+        <br>
+<br>        
+<div class="small-note">Don't have an account? <a href="sign.html" style="color:var(--accent);font-weight:600">Signup</a></div>
+      </form>
+      <!--
+    </div>
+    <div class="legal" role="note">By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></div>
+  -->
+  </div>
+  <br>
+
+</body>
+</html>

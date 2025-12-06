@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Docerad SkillHub</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00A86B',
+            secondary: '#FF8C00'
+          },
+          fontFamily: {
+            'montserrat': ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(255, 140, 0, 0.85) 0%, rgba(200, 100, 0, 0.9) 100%), 
+                  url('https://images.unsplash.com/photo-1556760544-74068565f05c?w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .feature-card {
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <div class="min-h-screen flex flex-col lg:flex-row">
+    
+    <!-- Left Side - Hero Section with Background -->
+    <div class="hero-bg lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between text-white min-h-[300px] lg:min-h-screen">
+      <div>
+        <a href="index.html" class="inline-flex items-center space-x-2 mb-8">
+          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-secondary font-bold text-xl">S</span>
+          </div>
+          <span class="text-2xl font-bold">Docerad SkillHub</span>
+        </a>
+      </div>
+      
+      <div class="space-y-6">
+        <h1 class="text-3xl lg:text-4xl font-bold leading-tight">
+          Start Your<br>
+          <span class="text-white">Entrepreneurship Journey</span>
+        </h1>
+        <p class="text-white/90 text-lg max-w-md">
+          Learn practical skills from industry experts and become self-employed in Nigeria's growing economy.
+        </p>
+        
+        <!-- Features -->
+        <div class="space-y-4 pt-4">
+          <div class="feature-card p-4 rounded-xl flex items-start space-x-4">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="ri-video-line text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold">Hands-on Training</h3>
+              <p class="text-white/80 text-sm">Learn by doing with practical workshops</p>
+            </div>
+          </div>
+          
+          <div class="feature-card p-4 rounded-xl flex items-start space-x-4">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="ri-award-line text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold">Certified Programs</h3>
+              <p class="text-white/80 text-sm">Get recognized certificates upon completion</p>
+            </div>
+          </div>
+          
+          <div class="feature-card p-4 rounded-xl flex items-start space-x-4">
+            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="ri-briefcase-line text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold">Business Support</h3>
+              <p class="text-white/80 text-sm">Mentorship to start your own business</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hidden lg:block">
+        <p class="text-white/70 text-sm">
+          <i class="ri-shield-check-line mr-1"></i> Trusted by leading Nigerian organizations
+        </p>
+      </div>
+    </div>
+    
+    <!-- Right Side - Sign Up Form -->
+    <div class="lg:w-1/2 flex items-center justify-center p-6 lg:p-12 bg-white">
+      <div class="w-full max-w-md">
+        <!-- Mobile Logo -->
+        <div class="lg:hidden text-center mb-8">
+          <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold text-2xl">S</span>
+          </div>
+          <h2 class="text-xl font-bold text-gray-900">Docerad SkillHub</h2>
+        </div>
+        
+        <div class="text-center lg:text-left mb-8">
+          <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Create Account</h2>
+          <p class="text-gray-600">Start your skills training journey today</p>
+        </div>
+        
+        <form id="signupForm" class="space-y-5">
+          <!-- Full Name Field -->
+          <div>
+            <label for="fullname" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i class="ri-user-line text-gray-400 text-lg"></i>
+              </div>
+              <input 
+                type="text" 
+                id="fullname" 
+                name="fullname" 
+                required
+                class="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all bg-gray-50 focus:bg-white"
+                placeholder="Enter your full name"
+              >
+            </div>
+          </div>
+          
+          <!-- Email Field -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i class="ri-mail-line text-gray-400 text-lg"></i>
+              </div>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all bg-gray-50 focus:bg-white"
+                placeholder="your@email.com"
+              >
+            </div>
+          </div>
+          
+          <!-- Phone Field -->
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i class="ri-phone-line text-gray-400 text-lg"></i>
+              </div>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                required
+                class="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all bg-gray-50 focus:bg-white"
+                placeholder="+234 800 000 0000"
+              >
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i class="ri-lock-line text-gray-400 text-lg"></i>
+              </div>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required
+                minlength="8"
+                class="w-full pl-12 pr-12 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all bg-gray-50 focus:bg-white"
+                placeholder="Create a password"
+              >
+              <button 
+                type="button" 
+                onclick="togglePassword('password')"
+                class="absolute inset-y-0 right-0 pr-4 flex items-center"
+              >
+                <i id="password-icon" class="ri-eye-off-line text-gray-400 hover:text-gray-600"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Confirm Password Field -->
+          <div>
+            <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i class="ri-lock-line text-gray-400 text-lg"></i>
+              </div>
+              <input 
+                type="password" 
+                id="confirmPassword" 
+                name="confirmPassword" 
+                required
+                class="w-full pl-12 pr-12 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all bg-gray-50 focus:bg-white"
+                placeholder="Confirm your password"
+              >
+              <button 
+                type="button" 
+                onclick="togglePassword('confirmPassword')"
+                class="absolute inset-y-0 right-0 pr-4 flex items-center"
+              >
+                <i id="confirmPassword-icon" class="ri-eye-off-line text-gray-400 hover:text-gray-600"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Skill Selection -->
+          <div>
+            <label for="skill" class="block text-sm font-medium text-gray-700 mb-2">Select Skill to Learn</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i class="ri-tools-line text-gray-400 text-lg"></i>
+              </div>
+              <select 
+                id="skill" 
+                name="skill" 
+                required
+                class="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all bg-gray-50 focus:bg-white appearance-none"
+              >
+                <option value="">Choose a skill...</option>
+                <option value="barbing">Barbing & Hairdressing</option>
+                <option value="fashion">Fashion Design & Tailoring</option>
+                <option value="baking">Baking & Confectionery</option>
+                <option value="welding">Welding & Fabrication</option>
+                <option value="catering">Catering & Cooking</option>
+                <option value="makeup">Makeup Artistry</option>
+                <option value="photography">Photography</option>
+              </select>
+              <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                <i class="ri-arrow-down-s-line text-gray-400 text-lg"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Terms Checkbox -->
+          <div class="flex items-start">
+            <input 
+              type="checkbox" 
+              id="terms"
+              required
+              class="h-4 w-4 mt-1 text-secondary focus:ring-secondary border-gray-300 rounded"
+            >
+            <label for="terms" class="ml-3 text-sm text-gray-600">
+              I agree to the <a href="#" class="text-primary font-medium hover:underline">Terms of Service</a> and <a href="#" class="text-primary font-medium hover:underline">Privacy Policy</a>
+            </label>
+          </div>
+          
+          <!-- Sign Up Button -->
+          <button 
+            type="submit"
+            class="w-full bg-gradient-to-r from-secondary to-orange-500 text-white py-4 px-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-secondary/30 transition-all transform hover:-translate-y-0.5"
+          >
+            Proceed to Payment
+          </button>
+        </form>
+        
+        <!-- Divider -->
+        <div class="my-8 flex items-center">
+          <div class="flex-1 border-t border-gray-200"></div>
+          <span class="px-4 text-sm text-gray-400">or</span>
+          <div class="flex-1 border-t border-gray-200"></div>
+        </div>
+        
+        <!-- Login Link -->
+        <div class="text-center">
+          <p class="text-gray-600">
+            Already have an account? 
+            <a href="login.html" class="text-primary font-semibold hover:text-green-700 transition-colors">Login here</a>
+          </p>
+        </div>
+        
+        <!-- Back to Home -->
+        <div class="text-center mt-6">
+          <a href="index.html" class="text-gray-500 hover:text-primary transition-colors inline-flex items-center text-sm">
+            <i class="ri-arrow-left-line mr-2"></i>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="payment.js"></script>
+
+</body>
+</html>

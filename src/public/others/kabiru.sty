@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Validation Demo</title>
+    <style>
+        body{font-family:Arial;margin:30px;background:#f7fafc}
+        .box{max-width:420px;margin:0 auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,.08)}
+        label{display:block;margin:8px 0 6px;font-weight:700;color:#374151}
+        input{width:100%;padding:9px;border-radius:8px;border:1px solid #e6eef6}
+        .msg{color:#dc2626;font-size:13px;margin:6px 0;display:none}
+        button{margin-top:8px;width:100%;padding:10px;border-radius:8px;background:#2563eb;color:#fff;border:0}
+        button[disabled]{opacity:.6}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3 style="text-align:center">Simple Validation</h3>
+        <form id="f" novalidate>
+            <label>Username
+                <input id="username" required>
+                <div id="username-msg" class="msg">This field must not be empty</div>
+            </label>
+
+            <label>Matric No
+                <input id="matric" required>
+                <div id="matric-msg" class="msg">This field must not be empty</div>
+            </label>
+
+            <label>Email
+                <input id="email" type="email" required>
+                <div id="email-msg" class="msg">Please enter a valid email</div>
+            </label>
+
+            <label>Password
+                <input id="password" type="password" minlength="6" required>
+                <div id="password-msg" class="msg">Password must be 6+ chars</div>
+            </label>
+
+            <button id="submit" disabled>Create Account</button>
+        </form>
+        <div id="note" style="text-align:center;color:#059669;display:none;margin-top:10px">Form submitted (demo)</div>
+    </div>
+
+    <script>
+        // Short, clear validation logic
+        const f = document.getElementById('f');
+        const submit = document.getElementById('submit');
+        const fields = ['username','matric','email','password'];
+
+        function check(){
+            let ok = true;
+            fields.forEach(id => {
+                const el = document.getElementById(id);
+                const msg = document.getElementById(id + '-msg');
+                if(!el.checkValidity()) { msg.style.display='block'; ok=false } else msg.style.display='none';
+            });
+            submit.disabled = !ok;
+        }
+
+        fields.forEach(id => document.getElementById(id).addEventListener('input', check));
+
+        f.addEventListener('submit', e => {
+            e.preventDefault(); if(submit.disabled) return; // safety
+            document.getElementById('note').style.display='block';
+            setTimeout(()=>{ f.reset(); check(); document.getElementById('note').style.display='none' },1200);
+        });
+
+        // initial check to set submit state
+        check();
+    </script>
+</body>
+</html>

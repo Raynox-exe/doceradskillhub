@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join Our Community - Sign Up</title>
+  <style>
+    :root{--accent:#5b5af8;--accent-2:#6b55f8;--card:#ffffff;--bg1:#eef6ff;--bg2:#f6f9ff}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));display:flex;align-items:flex-start;justify-content:center;padding-top:56px}
+    .container{width:420px;max-width:94%;padding:0 28px}
+    /* card: add extra top padding so the avatar can overlap nicely */
+    .card{background:var(--card);border-radius:14px;padding:44px 28px 30px;box-shadow:0 10px 30px rgba(38,57,95,0.06);border:1px solid rgba(91,90,248,0.06);position:relative}
+
+    /* avatar sits centered and overlaps the top edge of the card */
+    .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(180deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;position:absolute;left:50%;top:0;transform:translate(-50%,-50%);color:#fff;font-size:26px;box-shadow:0 6px 18px rgba(38,57,95,0.12);border:4px solid rgba(255,255,255,0.85)}
+
+    /* icon inside avatar (SVG will be white) */
+    .avatar svg{width:34px;height:34px;display:block}
+
+    h1{font-size:20px;margin:12px 0 4px;text-align:center;color:#13283b;font-weight:800}
+    p.lead{font-size:13px;margin:0 0 18px;text-align:center;color:#5e6f80}
+    form{display:block}
+    .row{display:flex;gap:12px}
+    /* allow children to shrink so inputs never overflow the card */
+    .row .two{min-width:0}
+    .field{display:flex;flex-direction:column;margin-bottom:12px}
+  label{font-size:12px;color:#5e6f80;margin-bottom:8px;font-weight:600}
+  /* make all inputs a consistent, slightly more compact height */
+  input[type=text], input[type=email], input[type=tel], input[type=password], select{height:40px;padding:8px 12px;border-radius:8px;border:1px solid #e6eef9;background:#fff;font-size:14px;color:#213142;box-sizing:border-box;width:100%;display:block}
+    .two{flex:1}
+    .full{width:100%}
+    .icon-input{position:relative}
+    .icon-input .left-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#9aa9b8;font-size:14px}
+    .icon-input input{padding-left:34px;width:100%;box-sizing:border-box}
+    .password-wrap{position:relative}
+    .toggle-eye{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#9aa9b8;cursor:pointer}
+    .checkbox-row{display:flex;align-items:center;gap:8px;margin-top:6px}
+    .checkbox-row input{width:16px;height:16px}
+    .submit{margin-top:18px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none;padding:12px 16px;border-radius:10px;width:100%;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(91,90,248,0.16)}
+    /* intro area above the form (for additional write-ups) */
+    .intro{min-height:68px;padding:6px 4px;margin-bottom:6px;color:#45607a;font-size:14px;text-align:center}
+    .footer-note{font-size:12px;color:#92a3b6;margin-top:10px}
+    /* legal note under the card */
+    .legal{max-width:420px;margin:18px auto 0;text-align:center;font-size:12px;color:#6f8ca6;padding:6px 8px}
+    .legal a{color:var(--accent);text-decoration:none;font-weight:600}
+    .legal a:hover{text-decoration:underline}
+
+  /* social buttons row (side-by-side) */
+  .social-row{display:flex;gap:12px;margin-bottom:12px}
+  .social-row .social-btn{flex:1;min-width:0;border:1px solid #e6eef9;background:#fff;padding:10px 12px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600}
+  .social-row .social-btn.google{color:#222}
+  .social-row .social-btn.linkedin{color:#0a66c2}
+  .footer-note{font-size:13px;color:#6f8092;margin-top:6px}
+
+    /* small screens */
+    @media (max-width:420px){.container{padding:0 16px}.card{padding-top:56px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="margin-bottom: 20px;">
+      <a href="../index (2).html" style="display: inline-flex; align-items: center; text-decoration: none; color: #5e6f80; font-weight: 600; font-size: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
+    </div>
+    <div class="card">
+      <div class="avatar" aria-hidden="true">
+        <!-- user SVG icon (white) -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" fill="rgba(255,255,255,0.95)"/>
+          <path d="M3 21c0-3.866 3.582-7 9-7s9 3.134 9 7v1H3v-1z" fill="rgba(255,255,255,0.95)"/>
+        </svg>
+      </div>
+      <h1>Register</h1>
+      <p class="lead">Start your entrepreneurship journey today</p>
+
+      <div class="intro">
+        <!-- space reserved above the form: add short write-ups here -->
+        <p style="margin:0">Learn practical entrepreneurship skills, access mentors, and join a network of successful small business owners. You can add a short paragraph or two here.</p>
+      </div>
+
+      <form>
+  <div class="row" style="margin-bottom:6px">
+          <div class="field two">
+            <label for="first">First Name</label>
+            <input id="first" type="text" placeholder="Renner" />
+          </div>
+          <div class="field two">
+            <label for="last">Last Name</label>
+            <input id="last" type="text" placeholder="Jack" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <div class="icon-input">
+            <span class="left-icon">📧</span>
+            <input id="email" type="email" placeholder="john@example.com" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <div class="icon-input">
+            <span class="left-icon">📞</span>
+            <input id="phone" type="tel" placeholder="+234" />
+          </div>
+        </div>
+
+        <!-- Business Type removed as requested 
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input id="password" type="password" placeholder="Create a strong password" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Confirm Password</label>
+          <div class="password-wrap">
+            <input id="confirm" type="password" placeholder="Confirm your password" />
+          </div>
+        </div>
+
+        <div class="checkbox-row">
+          <input id="agree" type="checkbox" />
+          <label for="agree" style="font-size:13px;color:#6f8092">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+        !-->
+
+        <!-- small legal note under the card -->
+  <div class="legal" role="note">By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></div>
+
+        <button class="submit" type="submit">🔒 <span style="margin-left:8px">Proceed to Payment</span></button>
+<!-- 
+        <div style="margin:18px 0;display:flex;align-items:center;gap:12px;">
+          <hr style="flex:1;border:none;height:1px;background:#e6eef9">
+          <div style="font-size:13px;color:#9aa9b8;white-space:nowrap">Or sign up with</div>
+          <hr style="flex:1;border:none;height:1px;background:#e6eef9">
+        </div>
+
+        <div class="social-row">
+          <button type="button" class="social-btn google" aria-label="Sign up with Google">G <span style="font-weight:600">Google</span></button>
+          <button type="button" class="social-btn linkedin" aria-label="Sign up with LinkedIn">in <span style="font-weight:600">LinkedIn</span></button>
+        </div>
+
+  <div class="footer-note" style="text-align:center">Already have an account? <a href="login.html">Login here</a></div>
+      
+--></form>
+    </div>
+    <br>
+    <br>
+  </div>
+</body>
+</html>

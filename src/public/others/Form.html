@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/register" method="POST" enctype="multipart/form-data" novalidate>
+  <!-- BIO -->
+  <fieldset>
+    <legend>Bio data</legend>
+    <label for="first_name">First name *</label>
+    <input id="first_name" name="first_name" type="text" required maxlength="50">
+
+    <label for="last_name">Last name *</label>
+    <input id="last_name" name="last_name" type="text" required maxlength="50">
+
+    <label for="dob">Date of birth *</label>
+    <input id="dob" name="dob" type="date" required>
+
+    <label for="gender">Gender *</label>
+    <select id="gender" name="gender" required>
+      <option value="">Choose…</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label for="photo">Passport photo (JPG/PNG, max 2MB)</label>
+    <input id="photo" name="photo" type="file" accept="image/*">
+  </fieldset>
+
+  <!-- CONTACT -->
+  <fieldset>
+    <legend>Contact</legend>
+    <label for="email">Email *</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="phone">Phone *</label>
+    <input id="phone" name="phone" type="tel" pattern="^\+?\d{7,15}$" required>
+
+    <label for="address">Residential address</label>
+    <textarea id="address" name="address" rows="3"></textarea>
+
+    <label for="emergency_name">Emergency contact name *</label>
+    <input id="emergency_name" name="emergency_name" type="text" required>
+
+    <label for="emergency_phone">Emergency contact phone *</label>
+    <input id="emergency_phone" name="emergency_phone" type="tel" required>
+  </fieldset>
+
+  <!-- SKILL -->
+  <fieldset>
+    <legend>Skill information</legend>
+    <label for="skill_area">Skill area *</label>
+    <select id="skill_area" name="skill_area" required>
+      <option value="">Select skill</option>
+      <option value="baking">Baking</option>
+      <option value="ict">ICT</option>
+      <option value="hairdressing">Hairdressing</option>
+      <!-- dynamically populate -->
+    </select>
+
+    <label>Skill level *</label>
+    <div>
+      <label><input type="radio" name="level" value="beginner" required> Beginner</label>
+      <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
+      <label><input type="radio" name="level" value="advanced"> Advanced</label>
+    </div>
+
+    <label for="start_date">Training start date</label>
+    <input id="start_date" name="start_date" type="date">
+  </fieldset>
+
+  <!-- REFERENCE -->
+  <fieldset>
+    <legend>Reference</legend>
+    <label for="ref_name">Referee name</label>
+    <input id="ref_name" name="ref_name" type="text">
+
+    <label for="ref_phone">Referee phone</label>
+    <input id="ref_phone" name="ref_phone" type="tel">
+  </fieldset>
+
+  <button type="submit">Register</button>
+</form>
+
+</body>
+</html>

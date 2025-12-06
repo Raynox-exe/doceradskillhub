@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Entrepreneurship Skill Training Center - Registration Form</title>
+	<style>
+		/* Page background */
+	:root{--primary:#4563f0;--primary-2:#4a62f1}
+	html,body{height:100%;margin:0;font-family:Tahoma, Geneva, Verdana, Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#eef6ff 0%, #f7fbff 100%);-webkit-font-smoothing:antialiased;font-size:16px;color:#213142}
+		.page{min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px}
+
+		/* Card */
+		.card{width:980px;background:transparent;border-radius:12px;box-shadow:0 20px 40px rgba(37,56,88,0.08);overflow:hidden}
+
+		/* Blue header */
+	.card .header{background:linear-gradient(90deg,var(--primary),#5b7bff);padding:28px 36px;color:#fff;text-align:center}
+	.card .header h1{margin:0;font-size:26px;font-weight:800;letter-spacing:0.4px}
+	.card .header p{margin:6px 0 0;font-size:14px;font-weight:700;opacity:0.95}
+
+		/* White body */
+		.card .body{background:#fff;padding:28px 36px;border-radius:0 0 12px 12px}
+
+		/* Bio header row */
+	.section-title{display:flex;align-items:center;gap:14px;padding:8px 0 18px;border-bottom:1px solid #e6eef9}
+	.section-title .icon{width:36px;height:36px;border-radius:8px;background:#f3f7ff;display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:900;font-size:18px}
+	.section-title h2{margin:0;font-size:18px;color:#2b3b54;font-weight:800}
+
+		/* Form grid */
+		form{margin-top:18px}
+		.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 28px}
+		.field{display:flex;flex-direction:column}
+		label{font-size:15px;color:#2f4458;margin-bottom:8px;font-weight:700}
+		input[type="text"], input[type="date"], select, input[type="file"]{
+			height:46px;padding:10px 14px;border-radius:8px;border:1px solid #e6eef9;background:#fff;color:#213142;font-size:15px;font-weight:600}
+		input[type="file"]{padding:8px}
+		select{appearance:none;background-image:linear-gradient(45deg, transparent 50%, #6576a6 50%),linear-gradient(135deg,#6576a6 50%, transparent 50%);background-position:calc(100% - 12px) calc(1em + 2px), calc(100% - 7px) calc(1em + 2px);background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+
+		.half{display:flex;gap:18px}
+
+		/* File input custom look */
+		.file-row{display:flex;gap:12px;align-items:center}
+		.file-row input[type=file]{flex:1}
+
+		/* Responsive */
+		@media (max-width:980px){.card{width:92%}.grid{grid-template-columns:1fr}.half{flex-direction:column}}
+
+		/* Contact section and textarea styles */
+		.section-title.contact{border-top:3px solid #e6f7ea;padding-top:12px;margin-top:22px;border-bottom:none}
+		.section-title.contact h2{color:#145a32}
+	textarea{min-height:80px;padding:12px;border-radius:8px;border:1px solid #e6eef9;background:#fff;color:#213142;font-size:15px;resize:vertical;font-weight:600}
+	.char-counter{font-size:13px;color:#708090;margin-top:6px;font-weight:600}
+		.fullwidth{grid-column:1 / -1}
+
+		/* Skill section styles */
+		.section-title.skill{border-top:3px solid #f3eefc;padding-top:12px;margin-top:22px;border-bottom:none}
+		.section-title.skill h2{color:#3b2f65}
+			.upload-hint{font-size:12px;color:#7b8796;margin-top:8px}
+
+			/* Reference & submit styles */
+			.section-title.ref{border-top:3px solid #fff3e6;padding-top:12px;margin-top:24px;border-bottom:none}
+			.section-title.ref h2{color:#6b3f00}
+			.submit-row{grid-column:1 / -1;margin-top:20px}
+			.submit-btn{display:inline-block;width:100%;padding:14px 20px;border-radius:8px;background:linear-gradient(90deg,var(--primary),#6b55f8);color:#fff;border:none;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 6px 20px rgba(75,90,255,0.18)}
+			.submit-btn .label{margin-left:8px}
+		</style>
+</head>
+<body>
+	<div class="page">
+		<div class="card" role="region" aria-label="Registration form card">
+			<div class="header">
+				<h1>Entrepreneurship Skill Training Center</h1>
+				<p>Registration Form</p>
+			</div>
+			<div class="body">
+				<div class="section-title">
+					<div class="icon">👤</div>
+					<h2>Bio Data</h2>
+				</div>
+
+				<form>
+					<div class="grid">
+						<div class="field">
+							<label for="fullName">Full Name <span style="color:#e55353">*</span></label>
+							<input id="fullName" type="text" placeholder="Enter your full name">
+						</div>
+
+						<div class="field">
+							<label for="gender">Gender <span style="color:#e55353">*</span></label>
+							<select id="gender">
+								<option value="">Select Gender</option>
+								<option>Male</option>
+								<option>Female</option>
+								<option>Other</option>
+							</select>
+						</div>
+
+						<div class="field">
+							<label for="dob">Date of Birth <span style="color:#e55353">*</span></label>
+							<input id="dob" type="date">
+						</div>
+
+						<div class="field">
+							<label for="nationality">Nationality <span style="color:#e55353">*</span></label>
+							<input id="nationality" type="text" placeholder="Enter your nationality">
+						</div>
+
+						<div class="field">
+							<label for="state">State / LGA <span style="color:#e55353">*</span></label>
+							<input id="state" type="text" placeholder="Enter your state/LGA">
+						</div>
+
+						<div class="field">
+							<label for="marital">Marital Status <span style="color:#e55353">*</span></label>
+							<select id="marital">
+								<option value="">Select Marital Status</option>
+								<option>Single</option>
+								<option>Married</option>
+								<option>Divorced</option>
+								<option>Widowed</option>
+							</select>
+						</div>
+
+						<div class="field">
+							<label for="education">Educational Qualification <span style="color:#e55353">*</span></label>
+							<select id="education">
+								<option value="">Select Qualification</option>
+								<option>SSCE / O'Level</option>
+								<option>ND / NCE</option>
+								<option>HND / BSc</option>
+								<option>Postgraduate</option>
+							</select>
+						</div>
+
+						<div class="field">
+							<label for="occupation">Occupation</label>
+							<input id="occupation" type="text" placeholder="Enter your current occupation">
+						</div>
+
+						<div class="field">
+							<label for="passport">Passport Photograph <span style="color:#e55353">*</span></label>
+							<div class="file-row">
+								<input id="passport" type="file" accept="image/*">
+							</div>
+						</div>
+
+							<div class="field">
+								<label for="nid">National ID Upload <span style="color:#e55353">*</span></label>
+								<div class="file-row">
+									<input id="nid" type="file" accept="image/*,.pdf">
+								</div>
+							</div>
+						</div>
+
+						<!-- Contact Information -->
+						<div class="section-title contact">
+							<div class="icon">📇</div>
+							<h2>Contact Information</h2>
+						</div>
+
+						<div class="grid">
+							<div class="field fullwidth">
+								<label for="resAddress">Residential Address <span style="color:#e55353">*</span></label>
+								<textarea id="resAddress" maxlength="500" placeholder="Enter your complete residential address"></textarea>
+								<div class="char-counter"><span id="resCount">0</span>/500 characters</div>
+							</div>
+
+							<div class="field">
+								<label for="email">Email Address <span style="color:#e55353">*</span></label>
+								<input id="email" type="text" placeholder="Enter your email address">
+							</div>
+
+							<div class="field">
+								<label for="phone">Phone Number <span style="color:#e55353">*</span></label>
+								<input id="phone" type="text" placeholder="Enter your phone number">
+							</div>
+
+							<div class="field">
+								<label for="altPhone">Alternative Phone Number</label>
+								<input id="altPhone" type="text" placeholder="Enter alternative phone number">
+							</div>
+
+							<div class="field">
+								<label for="emergencyName">Emergency Contact Name <span style="color:#e55353">*</span></label>
+								<input id="emergencyName" type="text" placeholder="Enter emergency contact name">
+							</div>
+
+							<div class="field">
+								<label for="relationship">Relationship to Emergency Contact <span style="color:#e55353">*</span></label>
+								<input id="relationship" type="text" placeholder="e.g., Parent, Spouse, Sibling">
+							</div>
+
+							<div class="field">
+								<label for="emergencyPhone">Emergency Contact Phone <span style="color:#e55353">*</span></label>
+								<input id="emergencyPhone" type="text" placeholder="Enter emergency contact phone">
+							</div>
+						</div>
+
+						<script>
+							(function(){
+								var resAddress = document.getElementById('resAddress');
+								var resCount = document.getElementById('resCount');
+								function updateCount(){ resCount.textContent = resAddress.value.length; }
+								if(resAddress){ resAddress.addEventListener('input', updateCount); updateCount(); }
+							})();
+						</script>
+
+						<!-- Skill Information -->
+						<div class="section-title skill">
+							<div class="icon">⚒️</div>
+							<h2>Skill Information</h2>
+						</div>
+
+						<div class="grid">
+							<div class="field">
+								<label for="skillArea">Chosen Skill Area <span style="color:#e55353">*</span></label>
+								<select id="skillArea">
+									<option value="">Select Skill Area</option>
+									<option>Tailoring</option>
+									<option>Catering</option>
+									<option>ICT</option>
+									<option>Carpentry</option>
+								</select>
+							</div>
+
+							<div class="field">
+								<label for="skillLevel">Skill Level <span style="color:#e55353">*</span></label>
+								<select id="skillLevel">
+									<option value="">Select Skill Level</option>
+									<option>Beginner</option>
+									<option>Intermediate</option>
+									<option>Advanced</option>
+								</select>
+							</div>
+
+							<div class="field">
+								<label for="schedule">Preferred Training Schedule <span style="color:#e55353">*</span></label>
+								<select id="schedule">
+									<option value="">Select Schedule</option>
+									<option>Weekdays</option>
+									<option>Weekends</option>
+									<option>Evenings</option>
+								</select>
+							</div>
+
+							<div class="field">
+								<label for="duration">Training Duration / Batch</label>
+								<input id="duration" type="text" placeholder="e.g., 3 months, Batch A">
+							</div>
+
+							<div class="field">
+								<label for="startDate">Training Start Date</label>
+								<input id="startDate" type="date">
+							</div>
+
+							<div class="field">
+								<label for="endDate">Training End Date</label>
+								<input id="endDate" type="date">
+							</div>
+
+							<div class="field">
+								<label for="trainer">Trainer Assigned</label>
+								<input id="trainer" type="text" placeholder="Enter trainer name">
+							</div>
+
+							<div class="field">
+								<label for="score">Assessment Score (0-100)</label>
+								<input id="score" type="text" placeholder="Enter score">
+							</div>
+
+							<div class="field">
+								<label for="certStatus">Certification Status</label>
+								<select id="certStatus">
+									<option value="">Select Status</option>
+									<option>Not Certified</option>
+									<option>Certified</option>
+									<option>Pending</option>
+								</select>
+							</div>
+
+							<div class="field fullwidth">
+								<label for="businessIdea">Business Idea or Plan</label>
+								<textarea id="businessIdea" maxlength="500" placeholder="Describe your business idea or plan..."></textarea>
+								<div class="char-counter"><span id="bizCount">0</span>/500 characters</div>
+							</div>
+
+							<div class="field fullwidth">
+								<label for="supportDocs">Upload Supporting Documents</label>
+								<input id="supportDocs" type="file" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+								<div class="upload-hint">PDF or DOCX files only</div>
+							</div>
+						</div>
+
+						<script>
+							(function(){
+								var biz = document.getElementById('businessIdea');
+								var bizCount = document.getElementById('bizCount');
+								function updateBiz(){ if(biz && bizCount) bizCount.textContent = biz.value.length; }
+								if(biz){ biz.addEventListener('input', updateBiz); updateBiz(); }
+							})();
+						</script>
+
+								<!-- Reference Information -->
+								<div class="section-title ref">
+									<div class="icon">🔗</div>
+									<h2>Reference Information</h2>
+								</div>
+
+								<div class="grid">
+									<div class="field">
+										<label for="refName">Referee / Guarantor Name <span style="color:#e55353">*</span></label>
+										<input id="refName" type="text" placeholder="Enter referee/guarantor name">
+									</div>
+
+										<div class="field">
+											<label for="refPhone">Referee / Guarantor Phone <span style="color:#e55353">*</span></label>
+											<input id="refPhone" type="text" placeholder="Enter referee/guarantor phone">
+										</div>
+
+										<div class="field">
+											<label for="refRelation">Relationship to Referee <span style="color:#e55353">*</span></label>
+											<input id="refRelation" type="text" placeholder="e.g., Friend, Colleague, Mentor">
+										</div>
+
+										<div class="field">
+											<label for="orgName">Organization or Employer Name</label>
+											<input id="orgName" type="text" placeholder="Enter organization/employer name">
+										</div>
+
+										<div class="field fullwidth">
+											<label for="sponsorId">Sponsor or Payment Reference ID</label>
+											<input id="sponsorId" type="text" placeholder="Enter sponsor/payment reference ID">
+										</div>
+
+										<div class="submit-row">
+											<button class="submit-btn" type="submit">✈️ <span class="label">Submit Registration</span></button>
+										</div>
+								</div>
+
+							</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

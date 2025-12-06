@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Programs - SkillHub Nigeria</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#00A86B',
+secondary: '#FF8C00'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+</style>
+
+</head>
+
+<body class="bg-white min-h-screen">
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center">
+<div class="font-['Montserrat'] text-2xl text-primary">Entrepreneurship Skills Training</div>
+</div>
+<div class="hidden md:block">
+  <div class="ml-10 flex items-baseline space-x-8">
+    <a href="index (2).html#home" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" ...>Home</a>
+<a href="index (2).html#administration" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" ...>Administration</a>
+<a href="index (2).html#programs" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" ...>Programs</a>
+<a href="index (2).html#reviews" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" ...>Reviews</a>
+<a href="index (2).html#contact" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium transition-colors" ...>Contact</a>
+  </div>
+</div>
+
+</div>
+</div>
+</nav>
+<section class="relative py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Training Programs</h1>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover comprehensive skill development programs designed to empower Nigerian entrepreneurs</p>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+<div class="mb-8">
+<div class="relative">
+<div class="w-full flex items-center">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-search-line text-gray-400"></i>
+</div>
+<input type="text" id="program-search" placeholder="Search for programs..." class="w-full py-3 px-4 text-gray-600 placeholder-gray-400 focus:outline-none">
+</div>
+</div>
+</div>
+<div class="space-y-4" id="programs-accordion">
+<!-- Technical & Vocational Skills -->
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none main-accordion-btn">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-tools-line text-primary"></i>
+</div>
+<span class="text-lg font-semibold">Technical & Vocational Skills</span>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 pb-4 space-y-2 accordion-content">
+<div class="sub-accordion border-l-2 border-primary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Welding & Fabrication</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Arc Welding</li>
+<li>• MIG Welding</li>
+<li>• TIG Welding</li>
+<li>• Metal Fabrication</li>
+<li>• Structural Steel Work</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<h4 class="font-medium mb-2">Course Materials</h4>
+<p class="text-sm mb-3">Comprehensive guides for mastering welding and fabrication techniques.</p>
+<div class="flex flex-col space-y-2">
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Welding Safety Guidelines</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Metal Fabrication Techniques</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Equipment Maintenance Manual</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="sub-accordion border-l-2 border-primary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Electrical Installation</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Domestic Wiring</li>
+<li>• Industrial Electrical Systems</li>
+<li>• Solar Installation</li>
+<li>• Electrical Maintenance</li>
+<li>• Power Distribution</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<h4 class="font-medium mb-2">Course Materials</h4>
+<p class="text-sm mb-3">Essential resources for electrical installation and maintenance.</p>
+<div class="flex flex-col space-y-2">
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Electrical Safety Standards</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Solar Installation Guide</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Wiring Diagrams Handbook</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Digital & Technology -->
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none main-accordion-btn">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full mr-4">
+<i class="ri-computer-line text-secondary"></i>
+</div>
+<span class="text-lg font-semibold">Digital & Technology</span>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 pb-4 space-y-2 accordion-content">
+<div class="sub-accordion border-l-2 border-secondary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Web Development</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Frontend Development</li>
+<li>• Backend Development</li>
+<li>• Full Stack Development</li>
+<li>• WordPress Development</li>
+<li>• E-commerce Development</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<h4 class="font-medium mb-2">Course Materials</h4>
+<p class="text-sm mb-3">Complete web development learning resources and tutorials.</p>
+<div class="flex flex-col space-y-2">
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Web Development Fundamentals</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Full Stack Development Guide</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>E-commerce Solutions Manual</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="sub-accordion border-l-2 border-secondary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Digital Marketing</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Social Media Marketing</li>
+<li>• Search Engine Optimization</li>
+<li>• Content Marketing</li>
+<li>• Email Marketing</li>
+<li>• Google Ads</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<h4 class="font-medium mb-2">Course Materials</h4>
+<p class="text-sm mb-3">Digital marketing strategies and best practices guides.</p>
+<div class="flex flex-col space-y-2">
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Digital Marketing Essentials</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>SEO Best Practices Guide</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Social Media Strategy Handbook</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Creative & Fashion -->
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none main-accordion-btn">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-scissors-line text-primary"></i>
+</div>
+<span class="text-lg font-semibold">Creative & Fashion</span>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 pb-4 space-y-2 accordion-content">
+<div class="sub-accordion border-l-2 border-primary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Fashion Design</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Pattern Making</li>
+<li>• Garment Construction</li>
+<li>• Fashion Illustration</li>
+<li>• Traditional Attire Design</li>
+<li>• Contemporary Fashion</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<h4 class="font-medium mb-2">Course Materials</h4>
+<p class="text-sm mb-3">Fashion design techniques and pattern making guides.</p>
+<div class="flex flex-col space-y-2">
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Pattern Making Fundamentals</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Fashion Design Techniques</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Traditional Attire Guide</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="sub-accordion border-l-2 border-primary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Textile Design</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Fabric Printing</li>
+<li>• Tie & Dye</li>
+<li>• Batik Making</li>
+<li>• Weaving</li>
+<li>• Surface Design</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Agriculture & Food Processing -->
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none main-accordion-btn">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full mr-4">
+<i class="ri-plant-line text-secondary"></i>
+</div>
+<span class="text-lg font-semibold">Agriculture & Food Processing</span>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 pb-4 space-y-2 accordion-content">
+<div class="sub-accordion border-l-2 border-secondary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Crop Farming</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Vegetable Farming</li>
+<li>• Grain Production</li>
+<li>• Organic Farming</li>
+<li>• Greenhouse Technology</li>
+<li>• Pest Management</li>
+</ul>
+</div>
+</div>
+<div class="sub-accordion border-l-2 border-secondary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Food Processing</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Food Preservation</li>
+<li>• Packaging Technology</li>
+<li>• Quality Control</li>
+<li>• Value Addition</li>
+<li>• Storage Methods</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Beauty & Personal Care -->
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none main-accordion-btn">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-brush-line text-primary"></i>
+</div>
+<span class="text-lg font-semibold">Beauty & Personal Care</span>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 pb-4 space-y-2 accordion-content">
+<div class="sub-accordion border-l-2 border-primary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Cosmetics Production</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Natural Skincare</li>
+<li>• Hair Products</li>
+<li>• Body Care Products</li>
+<li>• Organic Formulation</li>
+<li>• Product Safety</li>
+</ul>
+</div>
+</div>
+<div class="sub-accordion border-l-2 border-primary/20 ml-14">
+<button class="w-full px-4 py-2 flex items-center justify-between text-left focus:outline-none sub-accordion-btn">
+<span class="text-gray-700">Hair Styling</span>
+<i class="ri-arrow-down-s-line transition-transform"></i>
+</button>
+<div class="hidden px-4 py-3 text-gray-600 sub-accordion-content">
+<ul class="space-y-2">
+<li>• Hair Treatment</li>
+<li>• Braiding Techniques</li>
+<li>• Wig Making</li>
+<li>• Natural Hair Care</li>
+<li>• Salon Management</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-gray-200">
+<h4 class="font-medium mb-2">Course Materials</h4>
+<p class="text-sm mb-3">Master the art of professional hair styling with our comprehensive guides and tutorials.</p>
+<div class="flex flex-col space-y-2">
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Hair Styling Fundamentals Guide</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Advanced Braiding Techniques Manual</span>
+</a>
+<a href="#" class="flex items-center text-primary hover:text-primary/80 text-sm">
+<i class="ri-file-pdf-line mr-2"></i>
+<span>Salon Business Management Guide</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-gradient-to-r from-primary to-green-600 text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl lg:text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
+<p class="text-xl mb-8 opacity-90">Join thousands of successful graduates who started their journey with SkillHub Nigeria</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-8 py-4 !rounded-button text-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+Enroll Now
+</button>
+
+</div>
+</div>
+</section>
+<footer id="contact" class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<div class="font-['Montserrat'] text-2xl text-primary mb-4">Skill Training</div>
+<p class="text-gray-300 mb-4">Empowering Nigerian entrepreneurs with world-class skills training and certification programs.</p>
+<div class="flex space-x-4">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-facebook-fill text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-twitter-fill text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-instagram-fill text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-linkedin-fill text-primary"></i>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2 text-gray-300">
+<li><a href="#" class="hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Programs</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Admissions</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Success Stories</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Blog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Programs</h3>
+<ul class="space-y-2 text-gray-300">
+<li><a href="#" class="hover:text-primary transition-colors">Technical Skills</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Digital Skills</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Creative Arts</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Business Skills</a></li>
+<li><a href="#" class="hover:text-primary transition-colors">Agriculture</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+<div class="space-y-3 text-gray-300">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>123 Victoria Island, Lagos, Nigeria</span>
+</div>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-phone-line"></i>
+</div>
+<span>+234 803 123 4567</span>
+</div>
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-mail-line"></i>
+</div>
+<span>info@e=Entrepreneurshipskillstrainingnigeria.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2025 SkillHub Nigeria. All rights reserved. Empowering Nigerian entrepreneurs since 2020.</p>
+</div>
+</div>
+</footer>
+<script id="accordion-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const mainAccordionBtns = document.querySelectorAll('.main-accordion-btn');
+const subAccordionBtns = document.querySelectorAll('.sub-accordion-btn');
+const searchInput = document.getElementById('program-search');
+function toggleAccordion(btn, isMain = true) {
+const content = btn.nextElementSibling;
+const arrow = btn.querySelector('.ri-arrow-down-s-line');
+const isOpen = !content.classList.contains('hidden');
+if (isMain) {
+mainAccordionBtns.forEach(otherBtn => {
+if (otherBtn !== btn) {
+otherBtn.nextElementSibling.classList.add('hidden');
+otherBtn.querySelector('.ri-arrow-down-s-line').style.transform = 'rotate(0deg)';
+}
+});
+}
+content.classList.toggle('hidden');
+arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+mainAccordionBtns.forEach(btn => {
+btn.addEventListener('click', () => toggleAccordion(btn));
+});
+subAccordionBtns.forEach(btn => {
+btn.addEventListener('click', () => toggleAccordion(btn, false));
+});
+searchInput.addEventListener('input', function(e) {
+const searchTerm = e.target.value.toLowerCase();
+const allMainAccordions = document.querySelectorAll('.main-accordion-btn');
+const allSubAccordions = document.querySelectorAll('.sub-accordion');
+allMainAccordions.forEach(accordion => {
+const mainText = accordion.textContent.toLowerCase();
+const mainSection = accordion.closest('.border');
+const subAccordions = mainSection.querySelectorAll('.sub-accordion');
+let shouldShowMain = false;
+subAccordions.forEach(subAccordion => {
+const subText = subAccordion.textContent.toLowerCase();
+if (subText.includes(searchTerm)) {
+subAccordion.style.display = 'block';
+shouldShowMain = true;
+} else {
+subAccordion.style.display = 'none';
+}
+});
+if (mainText.includes(searchTerm) || shouldShowMain) {
+mainSection.style.display = 'block';
+if (searchTerm.length > 2) {
+accordion.nextElementSibling.classList.remove('hidden');
+accordion.querySelector('.ri-arrow-down-s-line').style.transform = 'rotate(180deg)';
+}
+} else {
+mainSection.style.display = 'none';
+}
+});
+});
+});
+</script>
+<script id="smooth-scrolling">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+if (targetSection) {
+targetSection.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
